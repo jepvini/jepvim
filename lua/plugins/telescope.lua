@@ -10,7 +10,7 @@ return {
     },
     keys = function()
       return {
-        { "<leader>R", "<cmd>Telescope registers<CR>", desc = "search in regosters" },
+        { "<leader>R", "<cmd>Telescope registers<CR>", desc = "search in registers" },
         { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "search in home" },
         { "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "rg in current dir" },
         { "<leader>fs", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "search in current buffer" },

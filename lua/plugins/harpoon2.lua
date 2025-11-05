@@ -19,14 +19,14 @@ return {
         desc = "Harpoon Quick Menu",
       },
       {
-        "<leader>l",
+        ";",
         function()
           require("harpoon"):list():prev()
         end,
         desc = "Prev in buffer",
       },
       {
-        "<leader>;",
+        "'",
         function()
           require("harpoon"):list():next()
         end,

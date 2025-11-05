@@ -34,6 +34,7 @@ return {
         c = { "clang_format" },
         cpp = { "clang_format" },
         json = { "jq" },
+        tex = { "tex-fmt" },
         lua = { "stylua" },
         markdown = { "mdformat" },
         nix = { "alejandra" },
@@ -41,7 +42,8 @@ return {
         sh = { "beautysh" },
         toml = { "taplo" },
 
-        ["*"] = { "codespell", "trim_whitespace", "trim_newlines" },
+        ["*"] = { "trim_whitespace", "trim_newlines" },
+        -- ["*"] = { "codespell", "trim_whitespace", "trim_newlines" },
       },
     },
   },

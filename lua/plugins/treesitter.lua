@@ -10,7 +10,7 @@ return {
       indent = {
         enable = true,
       },
-      sync_install = false,
+      sync_install = true,
       auto_install = true,
       ignore_install = {},
       ensure_installed = {

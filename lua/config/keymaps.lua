@@ -14,6 +14,9 @@ vim.keymap.set({ "i" }, "jk", "<esc>")
 -- Quit file
 -- vim.keymap.set("n", "<leader>q", "<cmd>:bd<cr>")
 
+-- Start Macro
+vim.keymap.set("n", "<leader>q", "q")
+
 -- Move half page
 vim.keymap.set({ "n", "v" }, "J", "<C-d>zz")
 vim.keymap.set({ "n", "v" }, "K", "<C-u>zz")
