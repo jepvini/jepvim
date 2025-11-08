@@ -47,15 +47,15 @@ return {
 
       sections = {
         lualine_a = { "mode" },
-        lualine_b = { "buffers", "branch", "diagnostics" },
+        lualine_b = { "buffers", "branch", "diff", "diagnostics" },
         lualine_c = {},
         lualine_x = {
           {
             "harpoon2",
             icon = "",
             color_active = { fg = "#a6e3a1" },
-            indicators = { "1", "2", "3", "4", "5" },
-            active_indicators = { "1", "2", "3", "4", "5" },
+            indicators = { "1", "2", "3", "4" },
+            active_indicators = { "1", "2", "3", "4" },
             _separator = " ",
             no_harpoon = " ",
           },

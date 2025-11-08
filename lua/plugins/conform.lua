@@ -37,7 +37,6 @@ return {
         tex = { "tex-fmt" },
         lua = { "stylua" },
         markdown = { "mdformat" },
-        nix = { "alejandra" },
         python = { "isort", "black" },
         sh = { "beautysh" },
         toml = { "taplo" },

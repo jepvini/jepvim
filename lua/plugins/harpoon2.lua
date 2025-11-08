@@ -46,20 +46,6 @@ return {
         end,
         desc = "Harpoon Select 4",
       },
-      {
-        ";",
-        function()
-          require("harpoon"):list():prev()
-        end,
-        desc = "Prev in buffer",
-      },
-      {
-        "'",
-        function()
-          require("harpoon"):list():next()
-        end,
-        desc = "Next in buffer",
-      },
     }
     return keys
   end,
