@@ -19,6 +19,34 @@ return {
         desc = "Harpoon Quick Menu",
       },
       {
+        "<C-j>",
+        function()
+          require("harpoon"):list():select(1)
+        end,
+        desc = "Harpoon Select 1",
+      },
+      {
+        "<C-k>",
+        function()
+          require("harpoon"):list():select(2)
+        end,
+        desc = "Harpoon Select 2",
+      },
+      {
+        "<C-h>",
+        function()
+          require("harpoon"):list():select(3)
+        end,
+        desc = "Harpoon Select 3",
+      },
+      {
+        "<C-l>",
+        function()
+          require("harpoon"):list():select(4)
+        end,
+        desc = "Harpoon Select 4",
+      },
+      {
         ";",
         function()
           require("harpoon"):list():prev()
@@ -33,16 +61,6 @@ return {
         desc = "Next in buffer",
       },
     }
-
-    for i = 1, 5 do
-      table.insert(keys, {
-        "<leader>" .. i,
-        function()
-          require("harpoon"):list():select(i)
-        end,
-        desc = "Harpoon to File " .. i,
-      })
-    end
     return keys
   end,
   opts = {

@@ -42,15 +42,6 @@ vim.keymap.set("v", "<leader>S", ":sort<cr>")
 -- Select whole buffe
 vim.keymap.set("n", "<leader>A", ":keepjumps normal! ggVG<cr>")
 
--- -- Tabs
--- vim.keymap.set("n", "<leader>h", "<cmd>tabn 3<cr>") -- tab 3
--- vim.keymap.set("n", "<leader>j", "<cmd>tabn 1<cr>") -- tab 1
--- vim.keymap.set("n", "<leader>k", "<cmd>tabn 2<cr>") -- tab 2
--- vim.keymap.set("n", "<leader>l", "<cmd>tabn 4<cr>") -- tab 4
-
--- Show registers
-vim.keymap.set("n", "<leader>R", "<cmd>registers<cr>")
-
 -- Disable scroll in insert mode
 vim.keymap.set("i", "<Up>", "<nop>")
 vim.keymap.set("i", "<Down>", "<nop>")
@@ -58,10 +49,6 @@ vim.keymap.set("n", "<Up>", "<nop>")
 vim.keymap.set("n", "<Down>", "<nop>")
 vim.keymap.set("v", "<Up>", "<nop>")
 vim.keymap.set("v", "<Down>", "<nop>")
-
--- Toggle first letter of word upper case or lower case
-vim.keymap.set("n", "<leader>U", "viWo<esc>vU")
-vim.keymap.set("n", "<leader>u", "viWo<esc>vu")
 
 -- Move in buffers
 vim.keymap.set("n", "<leader>.", "<cmd>bnext<cr>")
@@ -73,6 +60,7 @@ vim.api.nvim_set_keymap(
   "<cmd>lua vim.diagnostic.open_float()<CR>",
   { noremap = true, silent = true }
 )
+
 vim.api.nvim_set_keymap("n", "<leader>d[", "<cmd>lua vim.diagnostic.goto_prev()<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>d]", "<cmd>lua vim.diagnostic.goto_next()<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>dd", "<cmd>Telescope diagnostics<CR>", { noremap = true, silent = true })
