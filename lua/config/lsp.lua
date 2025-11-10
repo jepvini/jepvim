@@ -7,14 +7,17 @@ vim.keymap.set("n", "go", "<cmd>lua vim.lsp.buf.type_definition()<cr>")
 vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>")
 vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>")
 vim.keymap.set("n", "<leader>nn", "<cmd>lua vim.lsp.buf.rename()<cr>")
-vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>")
-vim.keymap.set("n", "<F4>", "<cmd>lua vim.lsp.buf.code_action()<cr>")
+vim.keymap.set({ "n", "x" }, "<leader>G", "<cmd>lua vim.lsp.buf.format({async = true})<cr>")
+vim.keymap.set("n", "<leader>na", "<cmd>lua vim.lsp.buf.code_action()<cr>")
 
 -- Enable
 vim.lsp.enable("bashls")
+vim.lsp.enable("bitbake-language-server")
 vim.lsp.enable("clangd")
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("marksman")
+vim.lsp.enable("taplo")
+vim.lsp.enable("texlab")
 
 -- Config
 vim.lsp.config["lua_ls"] = {
@@ -35,4 +38,11 @@ vim.lsp.config["lua_ls"] = {
       },
     },
   },
+}
+
+vim.lsp.config["taplo"] = {
+  cmd = { "taplo", "lsp", "stdio" },
+  filetypes = { "toml" },
+  -- root_markers = { ".taplo.toml", "taplo.toml", ".git" },
+  root_markers = { "." },
 }

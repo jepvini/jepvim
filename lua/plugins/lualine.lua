@@ -48,16 +48,29 @@ return {
       sections = {
         lualine_a = { "mode" },
         lualine_b = { "buffers", "branch", "diff", "diagnostics" },
-        lualine_c = {},
+        lualine_c = {
+          {
+            "searchcount",
+            maxcount = 999,
+            timeout = 500,
+          },
+        },
         lualine_x = {
           {
-            "harpoon2",
+            "lsp_status",
             icon = "",
-            color_active = { fg = "#a6e3a1" },
-            indicators = { "1", "2", "3", "4" },
-            active_indicators = { "1", "2", "3", "4" },
-            _separator = " ",
-            no_harpoon = " ",
+            symbols = {
+              -- Standard unicode symbols to cycle through for LSP progress:
+              spinner = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" },
+              -- Standard unicode symbol for when LSP is done:
+              done = "✓",
+              -- Delimiter inserted between LSP names:
+              separator = " ",
+            },
+            -- List of LSP names to ignore (e.g., `null-ls`):
+            ignore_lsp = {},
+            -- Display the LSP name
+            show_name = true,
           },
         },
         lualine_y = { "progress" },

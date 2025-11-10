@@ -51,8 +51,8 @@ vim.keymap.set("v", "<Up>", "<nop>")
 vim.keymap.set("v", "<Down>", "<nop>")
 
 -- Move in buffers
--- vim.keymap.set("n", "<leader>.", "<cmd>bnext<cr>")
--- vim.keymap.set("n", "<leader>,", "<cmd>bprevious<cr>")
+vim.keymap.set("n", "<C-k>", "<cmd>bnext<cr>")
+vim.keymap.set("n", "<C-j>", "<cmd>bprevious<cr>")
 
 vim.api.nvim_set_keymap(
   "n",
