@@ -21,7 +21,7 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 -- Remove signline
-vim.opt.signcolumn = "no"
+-- vim.opt.signcolumn = "no"
 
 -- Long lines wrapped
 vim.opt.wrap = true
@@ -37,7 +37,7 @@ vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 
 -- Tabs are spaces
-vim.opt.expandtab = true
+-- vim.opt.expandtab = true
 
 -- Disable autocomment pressing on new line
 vim.cmd([[autocmd FileType * set formatoptions-=ro]])
